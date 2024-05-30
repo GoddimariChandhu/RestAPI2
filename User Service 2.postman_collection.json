@@ -1,0 +1,82 @@
+{
+	"info": {
+		"_postman_id": "cd9a2d09-1153-4e20-a291-31868c63c7e4",
+		"name": "User Service 2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34683284",
+		"_collection_link": "https://martian-capsule-681281.postman.co/workspace/API-Request~7c2d65f5-bb75-42b0-9ef5-f87e17fa8674/collection/34683284-cd9a2d09-1153-4e20-a291-31868c63c7e4?action=share&source=collection_link&creator=34683284"
+	},
+	"item": [
+		{
+			"name": "View User By City",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check User Name\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Rakesh\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml"
+					}
+				],
+				"url": {
+					"raw": "https://webapps.tekstac.com/MovieAPI/UserService/viewUsersByCity/{{city}}",
+					"protocol": "https",
+					"host": [
+						"webapps",
+						"tekstac",
+						"com"
+					],
+					"path": [
+						"MovieAPI",
+						"UserService",
+						"viewUsersByCity",
+						"{{city}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "city",
+			"value": "Chennai",
+			"type": "string"
+		}
+	]
+}

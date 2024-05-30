@@ -1,0 +1,106 @@
+﻿Test Case ID,Test Scenario,Precondition,Test Condition,Test Case Steps,Test Data,Expected Result
+Tc_Sell_01,Ts_Sell_01,"1.Seller is able to Open Browser and enter the MagicBricks URL and login to homepage
+2.Sell function is visible to the Seller
+3.Post Property is visible to the Seller and seller opens it","To validate whether the sub tools like buy,rent,blog,home loans, tools&advices lists are displayed  and clickable","1.Open Browser
+2.Enter the url 
+3.Click on the Sell function
+4.Click on Post Property","1.Browser 
+2.https://www.magicbricks.com/
+",It should opens the Sell function and its Sub Functions
+Tc_Sell_02,Ts_Sell_01,"1.Seller is able to Open Browser and enter the MagicBricks URL and login to homepage        
+2.Sell function is visible to the Seller
+3.Post Property is visible to the Seller and seller opens it",To validate whether the Seller is able to refresh on clicking property free,"1.click on Post property
+2.click on property free","1.Browser
+2.https://www.magicbricks.com/",It should opens the Sell function and its Sub Functions
+Tc_Sell_03,Ts_Sell_01,"1.Seller is able to Open Browser and enter the MagicBricks URL and login to homepage
+2.Sell function is visible to the Seller
+3.Post Property is visible to the Seller and seller opens it",To validate whether the Seller is able to see the  popup icon to enter the details of seller  ,"1.Click on Post Property
+2.click on popup icon","1.Browser
+2.https://www.magicbricks.com/
+3.open post property",It should opens the Sell function and its post property function and opens the pop up icon
+Tc_Sell_04,Ts_Sell_01,"1.Seller should be on ""post property ""page",To validate whether the  Seller is able to open the property rates consist of listed cities,"1.Click on Post Property
+2.click on property rates button","1.on home page
+2.on post property page
+3.property rates button
+",It should opens the Sell function and its post property function and property rates button
+Tc_Sell_05,Ts_Sell_01,"1.Seller should be on ""post property ""page",To validate whether  the Seller is able to see the Recently Posted properties list,"1.Click on Post Property
+2.click on property rates button","1.on home pae 
+2.on post property page",It should opens the post property page and opens the properties list
+Tc_Sell_06,Ts_Sell_01,"1.Seller should be on ""post property ""page",To validate whether the Seller is able to open the magic brick email for enquiries,"1.on property page
+2.click on email id","1.on home pae 
+2.on post property page",It should opens the property page and enter the email id 
+Tc_Sell_07,Ts_Sell_02,"1.Seller should be on ""MyDashboard"" page",To validate  whether the Seller is  able to enter the Email id,"1.click on MyDashboard
+2.click on enter the email id","1.MyDashboard page opens
+2.emailid enters",It shouldopens MyDashboard and enter the email id
+Tc_Sell_08,Ts_Sell_02,"1.Seller should be on ""MyDashboard"" page",To validate whether the Seller is able to enter the mobile number,"1.click on MyDashboard
+2.click on enter the mobile number","1.MyDashboard page opens 
+2.mobile number ",It shouldopens MyDashboard and enter the mobile number
+Tc_Sell_09,Ts_Sell_02,"1.Seller should be on ""MyDashboard"" page",To validate wheteher the Seller is able to enter either email id or mobile number,"1.click on MyDashboard
+2.click on email id or mobile number","1.enter email id
+2.enter mobile number",It should opens the MyDashboard page and enter email or mobilr number
+Tc_Sell_10,Ts_Sell_02,"1.Seller should be on ""MyDashboard"" page",To validate whether the Seller is able to  login through google,1.click on login page through google,1.google  it,It should be opens the google and search the details
+Tc_Sell_11,Ts_Sell_02,"1.Seller should be on ""MyDashboard"" page",To validate whether the Seller is able to open sign up page ,"1.click on MyDashboard
+2.click on sign up ",1.sign in option,It should opens the My dashboard function and sign in it
+Tc_Sell_12,Ts_Sell_03,"1.Seller should be on""AdPackage"" page",To validate whether the Seller is able to opens the advertisements packages according requirements ,"1.click on AdPackage
+2.advertisement packages opened",1.advertisement packages,It should opens the AdPackage and open the advertisements
+Tc_Sell_13,Ts_Sell_03,"1.Seller should be on""AdPackage"" page",To validate whether is seller is able to use different combinations of advertisement packages,"1.click on AdPackage
+2.advertisement packages opened",1.different  advertisement package  combination,It should opens the AdPackage and open the advertisements
+Tc_Sell_14,Ts_Sell_03,"1.Seller should be on""AdPackage"" page",To validate whether the Seller is able to check  the list in go to cart,1.click and open the go to cart option,1.go to cart option,It should opens the AdPackage and open go to cart option
+Tc_Sell_15,Ts_Sell_03,"1.Seller should be on""AdPackage"" page",To validate whether the Seller is able to select the standardAD or Assisted Selling or More services ,1.click on selected options,"1.on AdPackage page
+2.different options",It should opens different options list
+Tc_Sell_16,Ts_Sell_03,"1.Seller should be on""AdPackage"" page",To validate whether the Seller is able to enter the details in get call back to advertise different packages,1.click on get call back button,1.get call back button,It should opens the AdPackage and opens  get call back 
+Tc_Sell_17,Ts_Sell_03,"1.Seller should be on""AdPackage"" page",To validate Whether the Seller is able purchage the different special packages,1.click on special packages button,1.opens special packages,It should opens special packages
+Tc_Sell_18,Ts_Sell_03,"1.Seller should be on""AdPackage"" page",To validate whether the Seller is able to Purchage the value Added packages,"1.click on AdPackage
+2.click on value Added Package",1.value added package,It should opens the Value added packages
+Tc_Sell_19,Ts_Sell_03,"1.Seller should be on""AdPackage"" page",To validate whether the Seller is able to purchage the advertisement packages in assisted selling or More services ,1.click on assisted or more services,"1.on Adpackage page
+2.different purchase option",It should opens the assisted  and more  other services
+Tc_Sell_20,Ts_Sell_04,"1.Seller should be on""iAdvantage"" page",To validate whether the Seller is opens the largest database URL,"1.click on iAdvantage
+2.click on URL",1.click the large database URL,It should opens iAdvantage page and opens URL
+Tc_Sell_21,Ts_Sell_04,"1.Seller should be on""iAdvantage"" page",To validate whether the Seller is able to open Add to my order ,1.click on Add to my order,"1.on iAdvantage page
+2.Add to my ordder button",It should opens the Add to my order list
+Tc_Sell_22,Ts_Sell_05,"1.Seller should be on ""Developer Lounge"" page",To validate whether the Seller is able to open the different buyers list,"1.click on Developer Lounge
+2.click on buyers list",1.buyer list,It should opens Developer Lounge page and opens buyers list
+Tc_Sell_23,Ts_Sell_05,"1.Seller should be on ""Developer Lounge"" page",To validate whether  the Developer Lounge is display  ,"1.click on Developer Lounge
+","1.on Developer Lounge
+2.display function ",It should opens the display function
+Tc_Sell_24,Ts_Sell_05,"1.Seller should be on ""Developer Lounge"" page",To validate whether the Seller is able to check the details of builders & other branded companies,"1.click on Developer Lounge
+2.click on builders & other branded companies","1.on Developer Lounge page
+2.builders & other branded companies",It should opens the Developer Lounge and opens the builders page
+Tc_Sell_25,Ts_Sell_06,"1.Seller should be on""Sales Enquiry"" page",To validate whether the Seller is able to  request a callback ,"1.click on Sales Enquiry button
+2.click on call back option","1.on Sales enquiry page
+2.call back option",It should opens the Sales enquiry page and opens the call back functionality
+Tc_Sell_26,Ts_Sell_06,"1.Seller should be on""Sales Enquiry"" page",To validate whether the Seller is able to ask aquestion from show me option,"1.click on Sales Enquiry 
+2.click on show me option","1.on Sales enquiry page 
+2.show me option",It should opens the  show me option
+Tc_Sell_27,Ts_Sell_06,"1.Seller should be on""Sales Enquiry"" page",To validate whether the Seller is able to check the cities list,1.click on cities list,"1.cities list 
+mumbai,bangalore,hyderabad,ahemdabad,delhi,kolkata etc..","It should opens cities list 
+bangalore,Mumbai,Dellhi,Kolkata,Hyderabad"
+Tc_Sell_28,Ts_Sell_06,"1.Seller should be on""Sales Enquiry"" page",To validate whether the Seller is able to open the emails of the candidates,1.click on email id of candidate button,1.email id of candidate ,It should opens the candidate email id
+Tc_Sell_29,Ts_Sell_06,"1.Seller should be on""Sales Enquiry"" page","To validate whether the Seller is able to view and opens the user profile ,property management and orders ",1.click on User profile ,"1.user profile 
+2.name,address",It should open User profile and add the address and others
+Tc_Sell_30,Ts_Sell_07,"1.Seller should be on ""Property valuation"" page",To validate whether the Seller is able enter the apartment name,"1.clcik on Property valuation
+2.click on apartment name",1.name of apartment,It should opens the Property valuation page and opens the apartment details 
+Tc_Sell_31,Ts_Sell_07,"1.Seller should be on ""Property valuation"" page",To validate whether the Seller is able to enter the locality name,1.click on locality name,"1.locality name
+2.delhi,mumbai,kolkatta,pune,bangalore",It should opens the locality name
+Tc_Sell_32,Ts_Sell_07,"1.Seller should be on ""Property valuation"" page",To validate whether the Seller is able to opens on basis of budget,1.click on basis of budget,1.basis of budget,It should opens the budget requirement analysis
+Tc_Sell_33,Ts_Sell_07,"1.Seller should be on ""Property valuation"" page",To validate whether the Seller is able to contact builder,1.click on contact builder button,"1.on property valuation page
+2.contact builder button",It should opens the contact builders list
+Tc_Sell_34,Ts_Sell_07,"1.Seller should be on ""Property valuation"" page",To validate whether the Seller is able to enter the area,1.click on enter the area,1.Enter the area name ,it should opens the   entered area
+Tc_Sell_35,Ts_Sell_08,"1.Seller should be on ""Find an agent"" page",To validate the top agents list through filters   ,"1.click on Find an agent
+2.click on filters","1.on Find an agent page
+2.filters",It should opens the filters list 
+Tc_Sell_36,Ts_Sell_08,"1.Seller should be on ""Find an agent"" page",To validate the  verified properties from properties list  ,"1.click on find an agent
+2.click on properties list",1.properties list,It should open the Find an agent page and opens the list of properties 
+Tc_Sell_37,Ts_Sell_08,"1.Seller should be on ""Find an agent"" page",To check whether the new project details valid,"1.click on find an agent
+2.click on new project details","1.on Find an agent page
+2.new project details",It should opens the new project details
+Tc_Sell_38,Ts_Sell_08,"1.Seller should be on ""Find an agent"" page","To validate whether the Seller is able to opens expert review and advice,project directory ","1.click on new projects
+2.click on Expert reviews and advices","1.on Find an agent page
+2.new project details
+3.Expert reviews and advices",It should opens the expert reviews and advices 
+Tc_Sell_39,Ts_Sell_09,"1.Seller should be on ""Rates & Trends"" page",To validate whether the residential or commercial   ,"1.click on Rates & Trends
+2.click on residential or commercial button","1.on Rates & Trends page
+2.residential or commercial button",it should opens the Rates and trends page and opens the resedential or commercial layouts
+Tc_Sell_40,Ts_Sell_09,"1.Seller should be on ""Rates & Trends"" page",To validate whether the selected location details  shown,1.click on selected location,1.location details,It should opens the selected locations
+Tc_Sell_41,Ts_Sell_09,"1.Seller should be on ""Rates & Trends"" page",To check whether the list shows the valid details ,1.click on details button,"1.on Rates & Trends page
+2.details button",It should opens the valid details 

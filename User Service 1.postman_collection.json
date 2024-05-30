@@ -1,0 +1,75 @@
+{
+	"info": {
+		"_postman_id": "4b03e317-a3ea-4fc4-8671-2859b1a4172e",
+		"name": "User Service 1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34683284",
+		"_collection_link": "https://martian-capsule-681281.postman.co/workspace/API-Request~7c2d65f5-bb75-42b0-9ef5-f87e17fa8674/collection/34683284-4b03e317-a3ea-4fc4-8671-2859b1a4172e?action=share&source=collection_link&creator=34683284"
+	},
+	"item": [
+		{
+			"name": "View All Users",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check Status Code\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"CheckPhoneNumber\",function(){\r",
+							"    var res=pm.response.json();\r",
+							"    for(let i=0;i<res.length;i++){\r",
+							"        if(res[i].userId===\"1002\"){\r",
+							"            pm.expect(res[i].userMobile).to.eql(\"2121412121\");\r",
+							"        }\r",
+							"    }\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://webapps.tekstac.com/MovieAPI/UserService/viewUserList",
+					"protocol": "https",
+					"host": [
+						"webapps",
+						"tekstac",
+						"com"
+					],
+					"path": [
+						"MovieAPI",
+						"UserService",
+						"viewUserList"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
