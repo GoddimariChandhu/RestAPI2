@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "6499d7e8-fdba-4072-8219-da4a701dd617",
+		"name": "IPL 4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34683284",
+		"_collection_link": "https://martian-capsule-681281.postman.co/workspace/API-Request~7c2d65f5-bb75-42b0-9ef5-f87e17fa8674/collection/34683284-6499d7e8-fdba-4072-8219-da4a701dd617?action=share&source=collection_link&creator=34683284"
+	},
+	"item": [
+		{
+			"name": "Team List",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Select Team\", function () {",
+							"    var responseJson = xml2Json(responseBody);",
+							"    pm.globals.set(\"Team\", responseJson['soapenv:Envelope']['soapenv:Body']['getTeamsListResponse']['getTeamsListReturn'][2]);",
+							"});",
+							"pm.test(\"Check 3rd Team\", function () {",
+							"    pm.expect(pm.globals.get(\"Team\")).to.eql(\"Chennai Super Kings\");",
+							"});",
+							" ",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml"
+					},
+					{
+						"key": "SOAPAction",
+						"value": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "  <Envelope xmlns=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n\r\n     <Body>\r\n\r\n     <getTeamsList xmlns=\"http://ipl\"/>\r\n\r\n     </Body>\r\n\r\n     </Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://webapps.tekstac.com/IplDatabaseSoapWebservice/services/IplDatabase",
+					"protocol": "https",
+					"host": [
+						"webapps",
+						"tekstac",
+						"com"
+					],
+					"path": [
+						"IplDatabaseSoapWebservice",
+						"services",
+						"IplDatabase"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Captain",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check Captain\",function(){\r",
+							"    pm.expect(pm.response.text()).to.include(\"MS Dhoni\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml"
+					},
+					{
+						"key": "SOAPAction",
+						"value": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<Envelope xmlns=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n\r\n         <Body>\r\n\r\n        <getCaptain xmlns=\"http://ipl\">\r\n\r\n        <teamName>{{Team}}</teamName>\r\n\r\n        </getCaptain>\r\n\r\n        </Body>\r\n\r\n        </Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://webapps.tekstac.com/IplDatabaseSoapWebservice/services/IplDatabase",
+					"protocol": "https",
+					"host": [
+						"webapps",
+						"tekstac",
+						"com"
+					],
+					"path": [
+						"IplDatabaseSoapWebservice",
+						"services",
+						"IplDatabase"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

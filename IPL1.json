@@ -1,0 +1,94 @@
+{
+	"info": {
+		"_postman_id": "a1f2f535-d145-40f3-abe0-eaa69f5d211a",
+		"name": "IPL 1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34683284",
+		"_collection_link": "https://martian-capsule-681281.postman.co/workspace/API-Request~7c2d65f5-bb75-42b0-9ef5-f87e17fa8674/collection/34683284-a1f2f535-d145-40f3-abe0-eaa69f5d211a?action=share&source=collection_link&creator=34683284"
+	},
+	"item": [
+		{
+			"name": "Find Winner",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check Winner\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Mumbai Indians\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml"
+					},
+					{
+						"key": "SOAPAction",
+						"value": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "  <Envelope xmlns=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n\r\n        <Body>\r\n\r\n        <getWinnerTeam xmlns=\"http://ipl\">\r\n\r\n            <year>{{Year}}</year>\r\n\r\n        </getWinnerTeam>\r\n\r\n        </Body>\r\n\r\n       </Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://webapps.tekstac.com/IplDatabaseSoapWebservice/services/IplDatabase",
+					"protocol": "https",
+					"host": [
+						"webapps",
+						"tekstac",
+						"com"
+					],
+					"path": [
+						"IplDatabaseSoapWebservice",
+						"services",
+						"IplDatabase"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Year",
+			"value": "2015",
+			"type": "string"
+		}
+	]
+}

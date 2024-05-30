@@ -1,0 +1,84 @@
+{
+	"info": {
+		"_postman_id": "9f4a16d3-04b1-4b0b-ab66-1b5f577005bc",
+		"name": "Cinema Hall Service 2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34683284",
+		"_collection_link": "https://martian-capsule-681281.postman.co/workspace/API-Request~7c2d65f5-bb75-42b0-9ef5-f87e17fa8674/collection/34683284-9f4a16d3-04b1-4b0b-ab66-1b5f577005bc?action=share&source=collection_link&creator=34683284"
+	},
+	"item": [
+		{
+			"name": "Delete Cinema Hall",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check Seat Not Available\", function () {\r",
+							"    pm.expect(pm.response.text()).to.not.include(3102);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://webapps.tekstac.com/MovieAPI/CinemaHallService/deleteCinemaHallById/{{id}}",
+					"protocol": "https",
+					"host": [
+						"webapps",
+						"tekstac",
+						"com"
+					],
+					"path": [
+						"MovieAPI",
+						"CinemaHallService",
+						"deleteCinemaHallById",
+						"{{id}}"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "id",
+			"value": "3102",
+			"type": "string"
+		}
+	]
+}
